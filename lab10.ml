@@ -183,7 +183,7 @@ implementation of merge and insertion sort above.
 
    In summary, merge sort is a little slower on the short list but
    much faster on the long list, consistent with its better
-   asymptotic complexity. (You're numbers may vary of course.)
+   asymptotic complexity. (Your numbers may vary of course.)
 
    Generally when running experiments, it is good practice to run
    more than one trial. We can do this for our timing as well to
@@ -703,7 +703,7 @@ let rec time_find_min (n : int) : int =
    out. (Ignoring for a moment the constant in the split closed
    form solution, 2T_split(n/2) becomes 2(k * n / 4) = k * n / 2). As
    we unfold log(n) times, adding a k * n / 2 term each time, we will
-   have a term of log(n) * k * n / 2 = k * nlog(n) / 2 in our closed
+   have a term of log(n) * k * n / 2 = k * n log(n) / 2 in our closed
    form.
 
    We can now return to the constant in the closed form solution of
@@ -729,7 +729,7 @@ let rec time_find_min (n : int) : int =
    that encompassess the time the two base cases take.
 
    Gathering all our terms, we have:
-   T_fm(n) = k * log(n) + (k / 2) * nlog(n) + 2 * q * n + c
+   T_fm(n) = k * log(n) + (k / 2) * n log(n) + 2 * q * n + c
 
    To find the closest big O class, we need only look at the largest
    term. This term is (k / 2) * n log(n). We can drop constant factors,
